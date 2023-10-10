@@ -17,7 +17,7 @@ public class ItemGenerator : MonoBehaviour
     {
         for (float i = s_distance; i < g_distance; i = i + 5)
         {
-            if(i%3 == 0)
+            if(i%2 == 0)
             {
                 j = random.Next(num.Length);
             }

@@ -15,7 +15,7 @@ public class ScoreScript : MonoBehaviour
 
         if (GamesManager._instanceGames != null)
         {
-            _score.text = GamesManager._instanceGames._score.ToString();
+            _score.text = GamesManager._instanceGames._score.ToString() + " Pt";
         }
         else
         {
@@ -29,7 +29,7 @@ public class ScoreScript : MonoBehaviour
     {
         if (_oldScore != GamesManager._instanceGames._score)
         {
-            _score.text = GamesManager._instanceGames._score.ToString();
+            _score.text = GamesManager._instanceGames._score.ToString() + " Pt";
 
             _oldScore = GamesManager._instanceGames._score;
         }

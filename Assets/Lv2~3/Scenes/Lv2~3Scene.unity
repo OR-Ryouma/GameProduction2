@@ -335,8 +335,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 0.3}
-  m_Center: {x: 0, y: 2, z: 0.3}
+  m_Size: {x: 1, y: 10, z: 0.3}
+  m_Center: {x: 0, y: 4.5, z: 0.3}
 --- !u!1 &519112438
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,17 +868,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a9343492f321c4eb68ea6e61f69b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpPower: 7.5
-  _duwnPower: -15
+  _jumpPower: 10
+  _duwnPower: -20
   _speedX: 10
   _speedZ: 10
   _acceleratorZ: 5
   _gravity: 9.81
   _isDamage: 0
   _isSriding: 0
-  _rayLengthF: 0.7
-  _rayLengthD: 0.7
-  _rayOffset: -0.5
+  _rayLengthF: 1
+  _rayLengthD: 1
+  _rayOffset: 0
   _layMaskE:
     serializedVersion: 2
     m_Bits: 0
@@ -917,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1561187712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 114da21483022d549b49246c71d27e62, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1016,7 +1016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 365, y: -20}
+  m_AnchoredPosition: {x: 480, y: -20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605166825
@@ -1052,7 +1052,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 114da21483022d549b49246c71d27e62, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -1064,7 +1064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 00000000
+  m_Text: 
 --- !u!222 &1605166827
 CanvasRenderer:
   m_ObjectHideFlags: 0

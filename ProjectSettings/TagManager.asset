@@ -7,11 +7,12 @@ TagManager:
   - Ground
   - Start Ground
   - Goal Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     public GameObject _bullet;
+    public GameObject _muzle;
 
     float up = 0.2f;
     float right = 0.1f;
@@ -14,6 +15,12 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private float _timer;
 
     public int _hp = 5;
+
+    // 自身のTransform
+    [SerializeField] private Transform _self;
+
+    // ターゲットのTransform
+    [SerializeField] private Transform _target;
 
     // 辞書型の変数を使ってます。
     Dictionary<string, bool> move = new Dictionary<string, bool>
@@ -33,6 +40,13 @@ public class PlayerController2D : MonoBehaviour
     {
         move["right"] = Input.GetKey(KeyCode.RightArrow);
         move["left"] = Input.GetKey(KeyCode.LeftArrow);
+
+        // ターゲットの方向に自身を回転させる
+        // 向きたい方向を計算
+        Vector3 dir = (_target.position - _self.position);
+
+        // ここで向きたい方向に回転させてます
+        _self.rotation = Quaternion.FromToRotation(Vector3.right, dir);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -55,7 +69,7 @@ public class PlayerController2D : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Instantiate(_bullet, transform.position, Quaternion.identity);
+            Instantiate(_bullet, _muzle.transform.position, transform.rotation);
         }
 
         if(_hp <= 0)
